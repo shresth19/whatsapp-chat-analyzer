@@ -56,29 +56,30 @@ To run this project, you'll need the following:
    2. **Run the Analyzer**:
       - Place the exported `.txt` file in the project directory.
       - Use the following script to start analyzing:
-         ```python
-         from app import preprocess
-         # Open the exported chat file
-         with open("whatsapp_chat.txt", "r", encoding="utf-8") as file:
-            data = file.read()
-         # Process and analyze
-         df = preprocess(data)
-         # Display basic information
-         print(df.head())
-         ```
+         
+      ```python
+      from app import preprocess
+      # Open the exported chat file
+      with open("whatsapp_chat.txt", "r", encoding="utf-8") as file:
+         data = file.read()
+      # Process and analyze
+      df = preprocess(data)
+      # Display basic information
+      print(df.head())
+      ```
 
-    3. **View Results**:
+   3. **View Results**:
       - The results will include a DataFrame of messages, timestamps, users, and various other extracted data.
       - You can then extend the analysis by plotting graphs or further processing the data.
-      
+
 ## Project Structure
    ```bash
-    whatsapp-chat-analyzer/
-    │
-    ├── app.py               # Main application logic and preprocessing function
-    ├── requirements.txt      # Required libraries
-    ├── whatsapp_chat.txt     # Example WhatsApp chat export (this file is user-provided)
-    └── README.md             # Project README file (this file)
+   whatsapp-chat-analyzer/
+   │
+   ├── app.py               # Main application logic and preprocessing function
+   ├── requirements.txt      # Required libraries
+   ├── whatsapp_chat.txt     # Example WhatsApp chat export (this file is user-provided)
+   └── README.md             # Project README file (this file)
    ```
 
 ## Functionality
