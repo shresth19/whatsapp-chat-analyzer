@@ -3,7 +3,8 @@ import pandas as pd
 
 def preprocess(data):
     # Regex to capture both 12-hour (AM/PM) and 24-hour formats
-    pattern = r'\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s(?:[apAP][mM])?\s'
+    pattern = r'\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s?(?:[APap][Mm])?\s?'
+
 
     # Split the data using the pattern
     messages = re.split(pattern, data)[1:]  # Split the chat log into individual messages
