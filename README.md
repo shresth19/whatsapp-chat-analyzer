@@ -1,4 +1,4 @@
-"""
+
     # WhatsApp Chat Analyzer
 
     This project analyzes WhatsApp chat data using Python. It processes chat logs exported from WhatsApp, extracting meaningful insights such as the most active users, message trends, and activity patterns. The analysis includes breaking down message counts, dates, times, and more from the chat data.
