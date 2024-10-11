@@ -10,16 +10,11 @@ if uploaded_file is not None:
     bytes_data = uploaded_file.getvalue()
     data = bytes_data.decode("utf-8")
     df = preprocessor.preprocess(data)
-
     # fetch unique users
-    user_list = df['user'].unique().tolist()
-    if 'group_notification' in user_list:
-           user_list.remove('group_notification')
+    user_list = [user for user in df['user'].unique().tolist() if user != 'group_notification']
     user_list.sort()
     user_list.insert(0,"Overall")
-
     selected_user = st.sidebar.selectbox("Show analysis wrt",user_list)
-
     if st.sidebar.button("Show Analysis"):
 
         # Stats Area
